@@ -24,21 +24,24 @@ console.log(cpuNumber)
 
 //Creo funzione per sommare userNumber con cpuNumber e con un if dentro la funzione vedo se è pari o dispari
 function sumEvenOrOdd(userNumber, cpuNumber) {
-    const result = userNumber + cpuNumber;
-    if (result % 2 == 0){
-        console.log("Il risultato è", stringEven)
+    const sum = userNumber + cpuNumber;
+    let result;
+    if (sum % 2 == 0){
+        result = stringEven
     }
-    else {
-        console.log("Il risultato è", stringOdd)
+    else if (sum % 2 == 1){
+        result = stringOdd
     }
     return result;
 }
 
-const result = sumEvenOrOdd(userNumber, cpuNumber)
-console.log("Il risultato è:", result)
+const evenOrOdd = sumEvenOrOdd(userNumber, cpuNumber)
+console.log("la somma è:", evenOrOdd)
 
-if (decision == stringEven || stringOdd){
+if (decision == evenOrOdd){
     console.log("L'utente ha vinto")
-} else if (decision != stringEven || stringOdd) {
+    alert("L'utente ha vinto")
+} else if (decision != evenOrOdd) {
     console.log("Il computer ha vinto")
+    alert("Il computer ha vinto")
 }
