@@ -1,6 +1,11 @@
+//L'utente sceglie tra pari o dispari
+const decision = prompt("Scegli tra pari e dispari")
+console.log(decision)
 //L'utente inserisce tramite prompt un numero da 1 a 5
 const userNumber = parseInt( prompt("Inserisci un numero da 1 a 5") );
 console.log(userNumber)
+
+// FUNZIONE PER NUMERO RANDOM *******************************************************
 
 // Creo funzione per numero random
 function getRndInteger(min, max) {
@@ -11,7 +16,20 @@ function getRndInteger(min, max) {
 let cpuNumber = getRndInteger(1, 5)
 console.log(cpuNumber)
 
-function evenOrOdd() {
-    
+// FUNZIONE PER SOMMA DEI NUMERI PARI O DISPARI **********************************************************
+
+//Creo funzione per sommare userNumber con cpuNumber e con un if dentro la funzione vedo se è pari o dispari
+function sumEvenOrOdd(userNumber, cpuNumber) {
+    const result = userNumber + cpuNumber;
+    if (result % 2 == 0){
+        console.log("Il risultato è pari")
+    }
+    else {
+        console.log("Il risultato è dipari", result)
+    }
+    return result;
 }
+
+const result = sumEvenOrOdd(userNumber, cpuNumber)
+console.log("Il risultato è:", result)
 
