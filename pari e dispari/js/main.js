@@ -25,7 +25,7 @@ function sumEvenOrOdd(userNumber, cpuNumber) {
         console.log("Il risultato è pari")
     }
     else {
-        console.log("Il risultato è dipari", result)
+        console.log("Il risultato è dispari")
     }
     return result;
 }
