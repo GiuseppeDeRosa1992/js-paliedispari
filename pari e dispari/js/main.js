@@ -1,3 +1,7 @@
+//Creo stringhe
+let stringEven = "pari"
+let stringOdd = "dispari"
+
 //L'utente sceglie tra pari o dispari
 const decision = prompt("Scegli tra pari e dispari")
 console.log(decision)
@@ -22,10 +26,10 @@ console.log(cpuNumber)
 function sumEvenOrOdd(userNumber, cpuNumber) {
     const result = userNumber + cpuNumber;
     if (result % 2 == 0){
-        console.log("Il risultato è pari")
+        console.log("Il risultato è", stringEven)
     }
     else {
-        console.log("Il risultato è dispari")
+        console.log("Il risultato è", stringOdd)
     }
     return result;
 }
@@ -33,3 +37,8 @@ function sumEvenOrOdd(userNumber, cpuNumber) {
 const result = sumEvenOrOdd(userNumber, cpuNumber)
 console.log("Il risultato è:", result)
 
+if (decision == stringEven || stringOdd){
+    console.log("L'utente ha vinto")
+} else if (decision != stringEven || stringOdd) {
+    console.log("Il computer ha vinto")
+}
