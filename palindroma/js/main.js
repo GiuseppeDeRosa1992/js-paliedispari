@@ -18,4 +18,15 @@ function reverseWord (word) {
         reverseWord = array.join("")
         console.log(reverseWord)
     }
+    //se reverse word e uguale a word allora è palindoma
+    if (reverseWord == word) {
+        return "palindroma"
+    }
+    //sennò non è palindoma
+    else {
+        return "non è palindroma"
+    }
 }
+//creo variabile risultato e gli dico che è uguale al noe della funziona creata sopra ma gli aggiungo dentro il prompt nella parentesi
+let result = reverseWord(parola)
+console.log(result)
