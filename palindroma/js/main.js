@@ -1,7 +1,11 @@
+//creo variabile per richiamre main
+let div = document.getElementById("print")
+
 
 //Creo prompt per chiedere all'utente di inserire il nome
 let parola = prompt("Inserisci una parola")
 console.log(parola)
+div.innerHTML += `<div class="p-2 text-center bg-primary">La parola scelta è ${parola}</div>`
 
 //Inizio la funzione per vedere se la parola che inserisce l'utente e polindroma
 function reverseWord (word) {
@@ -18,6 +22,7 @@ function reverseWord (word) {
         reverseWord = array.join("")
         console.log(reverseWord)
     }
+    div.innerHTML += `<div class="p-2 text-center bg-danger">La parola al contrario è ${reverseWord}</div>`
     //se reverse word e uguale a word allora è palindoma
     if (reverseWord == word) {
         return "palindroma"
@@ -30,3 +35,4 @@ function reverseWord (word) {
 //creo variabile risultato e gli dico che è uguale al noe della funziona creata sopra ma gli aggiungo dentro il prompt nella parentesi
 let result = reverseWord(parola)
 console.log(result)
+div.innerHTML += `<div class="p-2 text-center bg-warning">Il risultato finale è ${result}</div>`
